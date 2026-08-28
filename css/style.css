@@ -1344,21 +1344,22 @@ p { margin: 0 0 1em; color: var(--gray-light); }
   border-top: 1px solid var(--line);
 }
 
-/* ---------- Luxury Barbershop Footer ---------- */
+/* ---------- Simple Modern Footer ---------- */
 .site-footer {
   background: #09090b;
-  border-top: 1px solid rgba(182, 144, 63, 0.25);
-  padding: 68px 0 32px;
-  color: #b0b0b8;
-  position: relative;
+  border-top: 1px solid rgba(182, 144, 63, 0.2);
+  padding: 48px 0 28px;
+  color: #a0a0a8;
+  font-size: 0.9rem;
 }
-.footer-grid {
+.footer-simple-top {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.1fr 1.3fr 1.3fr;
-  gap: 36px;
-  margin-bottom: 48px;
+  grid-template-columns: 1.5fr 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 36px;
 }
-.footer-brand .brand {
+.footer-simple-brand .brand {
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -1367,14 +1368,9 @@ p { margin: 0 0 1em; color: var(--gray-light); }
   letter-spacing: 0.04em;
   color: var(--off-white);
   text-decoration: none;
-  margin-bottom: 16px;
-  transform: none !important;
+  margin-bottom: 12px;
 }
-.footer-brand .brand:hover {
-  color: var(--off-white) !important;
-  transform: none !important;
-}
-.footer-brand .brand-mark {
+.footer-simple-brand .brand-mark {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1387,12 +1383,12 @@ p { margin: 0 0 1em; color: var(--gray-light); }
   flex-shrink: 0;
   box-shadow: 0 0 14px rgba(182, 144, 63, 0.15);
 }
-.footer-brand .brand-text {
+.footer-simple-brand .brand-text {
   display: flex;
   flex-direction: column;
   line-height: 1.05;
 }
-.footer-brand .brand-text .brand-sub {
+.footer-simple-brand .brand-text .brand-sub {
   font-family: var(--font-body);
   font-size: 0.62rem;
   letter-spacing: 0.2em;
@@ -1401,132 +1397,88 @@ p { margin: 0 0 1em; color: var(--gray-light); }
   text-transform: uppercase;
   margin-top: 2px;
 }
-.footer-desc {
+.footer-simple-tagline {
   font-size: 0.88rem;
-  line-height: 1.65;
-  color: #92929e;
-  margin: 0 0 18px 0;
+  line-height: 1.6;
+  color: #888892;
+  margin: 0 0 16px 0;
+  max-width: 340px;
 }
-.footer-grid h4 {
+.footer-simple-title {
   font-family: var(--font-body);
   text-transform: uppercase;
-  font-size: 0.76rem;
-  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
   font-weight: 700;
   color: var(--gold);
-  margin: 0 0 18px 0;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 8px;
+  margin: 0 0 16px 0;
 }
-.footer-grid h4::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 22px;
-  height: 2px;
-  background: var(--gold);
-}
-.footer-grid ul {
+.footer-simple-links {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.footer-grid li {
-  margin-bottom: 12px;
+.footer-simple-links a {
+  color: #b0b0b8;
   font-size: 0.88rem;
-}
-.footer-grid ul a {
-  color: #a8a8b2;
   text-decoration: none;
-  transition: all 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
 }
-.footer-grid ul a:hover {
-  color: #ffffff;
+.footer-simple-links a:hover {
+  color: var(--gold);
   transform: translateX(4px);
 }
-.footer-contact-list li {
+.footer-simple-info {
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.fsi-item {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  color: #a8a8b2;
-  line-height: 1.5;
+  margin: 0 0 12px 0;
+  color: #b0b0b8;
 }
-.footer-contact-list .fcl-icon {
-  color: var(--gold);
-  flex-shrink: 0;
-  font-size: 0.95rem;
-}
-.footer-newsletter-box p {
-  font-size: 0.86rem;
-  line-height: 1.55;
-  color: #92929e;
-  margin: 0 0 14px 0;
-}
-.footer-newsletter-form {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-.footer-newsletter-form input {
-  flex: 1;
-  min-width: 0;
-  padding: 11px 14px;
-  background: #131316;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 4px;
-  color: #ffffff;
-  font-size: 0.84rem;
-  transition: border-color 0.2s ease;
-}
-.footer-newsletter-form input:focus {
-  outline: none;
-  border-color: var(--gold);
-}
-.footer-newsletter-form button {
-  padding: 10px 18px;
-  border-radius: 4px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 0.78rem;
+.fsi-item span {
   flex-shrink: 0;
 }
-.newsletter-success {
-  display: block;
-  padding: 10px;
-  color: var(--gold);
-  font-size: 0.85rem;
-  font-weight: 600;
+.fsi-item a {
+  color: #b0b0b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 26px;
+.fsi-item a:hover {
+  color: var(--gold);
+}
+.footer-simple-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 22px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 14px;
-  color: #72727c;
+  gap: 12px;
   font-size: 0.82rem;
-}
-.footer-bottom-location {
-  color: #9a9aa4;
+  color: #686872;
 }
 
-@media (max-width: 1080px) {
-  .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; }
-}
-@media (max-width: 720px) {
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
-}
-@media (max-width: 480px) {
-  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
-  .footer-bottom { flex-direction: column; text-align: center; }
+@media (max-width: 820px) {
+  .footer-simple-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer-simple-tagline {
+    max-width: 100%;
+  }
+  .footer-simple-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
 }
 
 /* ---------- Sticky mobile CTA bar ---------- */
