@@ -73,44 +73,29 @@
   </section>
 
   <section class="section">
-    <div class="container hero-grid" style="align-items: stretch; gap: 48px;">
-      <!-- BLOC 1 : CARROUSEL PHOTO CENTRÉ DANS SON CADRE -->
-      <div class="hero-media gallery-carousel-wrapper" style="height: 100%; min-height: 520px; margin: 0; border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; justify-content: center; position: relative;">
-        <button class="carousel-btn carousel-prev" aria-label="Previous image" type="button" onclick="var c=this.closest('.gallery-carousel-wrapper').querySelector('.gallery-carousel'); c.scrollBy({left:-c.clientWidth,behavior:'smooth'});" style="z-index: 10;">‹</button>
-        <button class="carousel-btn carousel-next" aria-label="Next image" type="button" onclick="var c=this.closest('.gallery-carousel-wrapper').querySelector('.gallery-carousel'); c.scrollBy({left:c.clientWidth,behavior:'smooth'});" style="z-index: 10;">›</button>
-        <div class="gallery-carousel" style="width: 100%; height: 100%; overflow-x: auto; scroll-snap-type: x mandatory; display: flex;">
-          <div class="gallery-slide" style="flex: 0 0 100%; height: 100%;">
-            <img src="images/hero-barber.png" alt="Bab Nazareth Barbershop Master Barber" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;">
-          </div>
-          <div class="gallery-slide" style="flex: 0 0 100%; height: 100%;">
-            <img src="images/work-lineup-twists.jpg" alt="Precision Razor Line-Up at Bab Nazareth" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
-          </div>
-          <div class="gallery-slide" style="flex: 0 0 100%; height: 100%;">
-            <img src="images/work-twists-blue-cape.jpg" alt="Client Styling Chair at Bab Nazareth" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
-          </div>
-        </div>
-        <div class="carousel-dots" style="position: absolute; bottom: 14px; left: 0; right: 0; justify-content: center; z-index: 10;"></div>
+    <div class="container hero-grid" style="grid-template-columns: minmax(300px, 420px) 1fr; gap: 54px; align-items: center;">
+      <!-- BLOC 1 : IMAGE UNIQUE, LARGEUR OPTIMISÉE (PAS D'EMPIÉTEMENT) -->
+      <div class="hero-media" style="max-width: 420px; width: 100%; aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5); border: 1px solid rgba(182, 144, 63, 0.25);">
+        <img src="images/about-man-portrait.jpg" alt="Client at Bab Nazareth Barbershop" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
       </div>
 
-      <!-- BLOC 2 : TEXTE ENRICHI DE MÊME TAILLE -->
-      <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-        <div>
-          <span class="eyebrow" style="display: inline-block; margin-bottom: 10px;">Our Community</span>
-          <h2 style="margin-bottom: 18px; font-size: 2.1rem; line-height: 1.2;">A Neighborhood Barbershop</h2>
-          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--off-white); margin-bottom: 16px;">
-            Bab Nazareth Barbershop is a premier neighborhood barbershop located at 2118 Deer Park Avenue in Deer Park, NY, proudly serving clients throughout Suffolk County and Long Island. We welcome men, women and kids of all ages, offering a complete spectrum of grooming services ranging from classic haircuts and razor-sharp fades to comprehensive dreadlock maintenance and protective braid styling.
-          </p>
-          <p style="font-size: 1.02rem; line-height: 1.8; color: var(--gray-light); margin-bottom: 22px;">
-            Our core philosophy centers on uncompromising precision, consistency, and scalp health: flawless skin fades, sharp beard contours, nurtured locs, and styles that maintain their definition well between visits. Every appointment is a personalized consultation designed around your hair texture, lifestyle, and unique aesthetic.
-          </p>
-          <ul class="service-list" style="margin-bottom: 22px;">
-            <li>Precision Fades, Tapers &amp; Beard Sculpting <span class="tag">Expert</span></li>
-            <li>Starter Locs, Retwist &amp; Healthy Scalp Care <span class="tag">Specialty</span></li>
-            <li>Custom Braids, Twists &amp; Women's Haircuts <span class="tag">Full Care</span></li>
-            <li>Relaxed, Community-Focused Atmosphere <span class="tag">All Ages</span></li>
-          </ul>
-        </div>
-        <div class="cta-row" style="margin-top: 8px;">
+      <!-- BLOC 2 : TEXTE DU SALON -->
+      <div>
+        <span class="eyebrow" style="display: inline-block; margin-bottom: 10px;">Our Community</span>
+        <h2 style="margin-bottom: 18px; font-size: 2.1rem; line-height: 1.2;">A Neighborhood Barbershop</h2>
+        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--off-white); margin-bottom: 16px;">
+          Bab Nazareth Barbershop is a premier neighborhood barbershop located at 2118 Deer Park Avenue in Deer Park, NY, proudly serving clients throughout Suffolk County and Long Island. We welcome men, women and kids of all ages, offering a complete spectrum of grooming services ranging from classic haircuts and razor-sharp fades to comprehensive dreadlock maintenance and protective braid styling.
+        </p>
+        <p style="font-size: 1.02rem; line-height: 1.8; color: var(--gray-light); margin-bottom: 22px;">
+          Our core philosophy centers on uncompromising precision, consistency, and scalp health: flawless skin fades, sharp beard contours, nurtured locs, and styles that maintain their definition well between visits. Every appointment is a personalized consultation designed around your hair texture, lifestyle, and unique aesthetic.
+        </p>
+        <ul class="service-list" style="margin-bottom: 24px;">
+          <li>Precision Fades, Tapers &amp; Beard Sculpting <span class="tag">Expert</span></li>
+          <li>Starter Locs, Retwist &amp; Healthy Scalp Care <span class="tag">Specialty</span></li>
+          <li>Custom Braids, Twists &amp; Women's Haircuts <span class="tag">Full Care</span></li>
+          <li>Relaxed, Community-Focused Atmosphere <span class="tag">All Ages</span></li>
+        </ul>
+        <div class="cta-row">
           <a href="book-appointment.html" class="btn btn--gold">Book an Appointment</a>
           <a href="contact.html" class="btn btn--outline">Visit Our Shop</a>
         </div>
