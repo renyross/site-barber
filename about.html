@@ -73,15 +73,34 @@
   </section>
 
   <section class="section">
-    <div class="container hero-grid">
-      <div class="hero-media">
-        <img src="images/hero-barber.png" alt="Bab Nazareth Barbershop - A Neighborhood Barbershop in Deer Park, NY" style="object-position: 72% top;" loading="lazy">
+    <div class="container" style="max-width: 860px; text-align: center;">
+      <span class="eyebrow" style="display:inline-block; margin-bottom: 8px;">Our Community</span>
+      <h2 style="margin-bottom: 20px;">A Neighborhood Barbershop</h2>
+      <p style="font-size: 1.05rem; line-height: 1.7; color: var(--off-white); margin-bottom: 28px;">
+        Bab Nazareth Barbershop is a barbershop located at 2118 Deer Park Avenue in Deer Park, NY, serving clients throughout Suffolk County. We work with men, women and kids, offering everything from regular haircuts and fades to complete loc care and braiding.
+      </p>
+
+      <!-- Centered Carousel with Hero Barber Photo -->
+      <div class="gallery-carousel-wrapper" style="max-width: 720px; margin: 0 auto 32px;">
+        <button class="carousel-btn carousel-prev" aria-label="Previous image" type="button" onclick="var c=this.closest('.gallery-carousel-wrapper').querySelector('.gallery-carousel'); c.scrollBy({left:-c.clientWidth,behavior:'smooth'});">‹</button>
+        <button class="carousel-btn carousel-next" aria-label="Next image" type="button" onclick="var c=this.closest('.gallery-carousel-wrapper').querySelector('.gallery-carousel'); c.scrollBy({left:c.clientWidth,behavior:'smooth'});">›</button>
+        <div class="gallery-carousel" style="border-radius: var(--radius); overflow-x: auto; scroll-snap-type: x mandatory; display: flex;">
+          <div class="gallery-slide" style="flex: 0 0 100%; aspect-ratio: 16/10;">
+            <img src="images/hero-barber.png" alt="Bab Nazareth Barbershop Master Barber" style="width: 100%; height: 100%; object-fit: cover; object-position: 72% top; border-radius: var(--radius);">
+          </div>
+          <div class="gallery-slide" style="flex: 0 0 100%; aspect-ratio: 16/10;">
+            <img src="images/work-lineup-twists.jpg" alt="Precision Razor Line-Up at Bab Nazareth" style="width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: var(--radius);">
+          </div>
+          <div class="gallery-slide" style="flex: 0 0 100%; aspect-ratio: 16/10;">
+            <img src="images/work-twists-blue-cape.jpg" alt="Client Styling Chair at Bab Nazareth" style="width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: var(--radius);">
+          </div>
+        </div>
+        <div class="carousel-dots"></div>
       </div>
-      <div>
-        <h2>A Neighborhood Barbershop</h2>
-        <p>Bab Nazareth Barbershop is a barbershop located at 2118 Deer Park Avenue in Deer Park, NY, serving clients throughout Suffolk County. We work with men, women and kids, offering everything from regular haircuts and fades to complete loc care and braiding.</p>
-        <p>Our focus stays on precision and consistency &mdash; clean fades, sharp beard lines, healthy locs and styles that hold up between visits. Whatever brings you in, our goal is the same: quality work in a shop that feels like part of the community.</p>
-      </div>
+
+      <p style="font-size: 1rem; line-height: 1.7; color: var(--gray-light); max-width: 760px; margin: 0 auto;">
+        Our focus stays on precision and consistency &mdash; clean fades, sharp beard lines, healthy locs and styles that hold up between visits. Whatever brings you in, our goal is the same: quality work in a shop that feels like part of the community.
+      </p>
     </div>
   </section>
 
