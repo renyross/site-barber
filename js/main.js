@@ -5,16 +5,31 @@ function initSite() {
   var links = document.querySelector(".nav-links");
 
   if (toggle && links) {
-    toggle.addEventListener("click", function () {
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
       links.classList.toggle("is-open");
+      toggle.classList.toggle("is-active");
       var expanded = links.classList.contains("is-open");
       toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+      document.body.style.overflow = expanded ? "hidden" : "";
     });
 
     links.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         links.classList.remove("is-open");
+        toggle.classList.remove("is-active");
+        toggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
       });
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && links.classList.contains("is-open")) {
+        links.classList.remove("is-open");
+        toggle.classList.remove("is-active");
+        toggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+      }
     });
   }
 
