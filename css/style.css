@@ -552,13 +552,13 @@ p { margin: 0 0 1em; color: var(--gray-light); }
 /* ---------- Balanced About Section (Compact & Borderless) ---------- */
 .about-hero-grid {
   display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 46px;
+  grid-template-columns: 410px 1fr;
+  gap: 48px;
   align-items: center;
 }
 .about-photo-card {
   width: 100%;
-  max-width: 360px;
+  max-width: 410px;
   aspect-ratio: 4 / 5;
   border-radius: var(--radius);
   overflow: hidden;
@@ -580,7 +580,7 @@ p { margin: 0 0 1em; color: var(--gray-light); }
     gap: 32px;
   }
   .about-photo-card {
-    max-width: 340px;
+    max-width: 380px;
     margin: 0 auto;
   }
 }
