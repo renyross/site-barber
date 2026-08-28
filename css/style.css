@@ -1639,41 +1639,9 @@ p { margin: 0 0 1em; color: var(--gray-light); }
   }
 }
 
-/* ---------- Sticky mobile CTA bar ---------- */
+/* ---------- Sticky mobile CTA bar (Removed) ---------- */
 .mobile-cta-bar {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 200;
-  display: none;
-  grid-template-columns: repeat(3, 1fr);
-  background: var(--black);
-  border-top: 1px solid var(--line);
-  height: var(--sticky-cta-height);
-}
-.mobile-cta-bar a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--off-white);
-  border-right: 1px solid var(--line);
-}
-.mobile-cta-bar a:last-child { border-right: none; }
-.mobile-cta-bar a.is-primary { background: linear-gradient(135deg, var(--gold-soft), var(--gold)); color: var(--black); }
-.mobile-cta-bar .mcb-icon { font-size: 1.05rem; }
-
-@media (max-width: 880px) {
-  .mobile-cta-bar { display: grid; }
-  body { padding-bottom: var(--sticky-cta-height); }
-}
-@media (min-width: 881px) {
-  body { padding-bottom: 0; }
+  display: none !important;
 }
 
 /* ---------- Forms ---------- */
