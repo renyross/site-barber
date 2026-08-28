@@ -1352,20 +1352,20 @@ p { margin: 0 0 1em; color: var(--gray-light); }
   border-top: 1px solid var(--line);
 }
 
-/* ---------- Simple Modern Footer ---------- */
+/* ---------- Simple Modern Footer with Newsletter ---------- */
 .site-footer {
   background: #09090b;
   border-top: 1px solid rgba(182, 144, 63, 0.2);
-  padding: 48px 0 28px;
+  padding: 54px 0 28px;
   color: #a0a0a8;
   font-size: 0.9rem;
 }
 .footer-simple-top {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.2fr;
-  gap: 48px;
+  grid-template-columns: 1.3fr 0.85fr 1.1fr 1.35fr;
+  gap: 40px;
   align-items: start;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 }
 .footer-simple-brand .brand {
   display: inline-flex;
@@ -1410,7 +1410,7 @@ p { margin: 0 0 1em; color: var(--gray-light); }
   line-height: 1.6;
   color: #888892;
   margin: 0 0 16px 0;
-  max-width: 340px;
+  max-width: 320px;
 }
 .footer-simple-title {
   font-family: var(--font-body);
@@ -1462,6 +1462,50 @@ p { margin: 0 0 1em; color: var(--gray-light); }
 .fsi-item a:hover {
   color: var(--gold);
 }
+.footer-newsletter-tagline {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: #8a8a94;
+  margin: 0 0 14px 0;
+}
+.newsletter-input-group {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  max-width: 320px;
+}
+.newsletter-input-group input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  background: #141418;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.newsletter-input-group input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(182, 144, 63, 0.25);
+}
+.newsletter-input-group .btn {
+  padding: 9px 16px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+.newsletter-thanks {
+  color: var(--gold);
+  font-size: 0.86rem;
+  font-weight: 600;
+  display: inline-block;
+  padding: 8px 0;
+}
 .footer-simple-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding-top: 22px;
@@ -1474,12 +1518,21 @@ p { margin: 0 0 1em; color: var(--gray-light); }
   color: #686872;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 1024px) {
+  .footer-simple-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+@media (max-width: 640px) {
   .footer-simple-top {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 30px;
   }
   .footer-simple-tagline {
+    max-width: 100%;
+  }
+  .newsletter-input-group {
     max-width: 100%;
   }
   .footer-simple-bottom {
