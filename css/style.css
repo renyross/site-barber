@@ -549,17 +549,17 @@ p { margin: 0 0 1em; color: var(--gray-light); }
   .hero-grid { grid-template-columns: 1fr; }
 }
 
-/* ---------- Balanced About Section (No border, equal heights) ---------- */
+/* ---------- Balanced About Section (Compact & Borderless) ---------- */
 .about-hero-grid {
   display: grid;
-  grid-template-columns: 440px 1fr;
-  gap: 52px;
-  align-items: stretch;
+  grid-template-columns: 360px 1fr;
+  gap: 46px;
+  align-items: center;
 }
 .about-photo-card {
   width: 100%;
-  height: 100%;
-  min-height: 520px;
+  max-width: 360px;
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius);
   overflow: hidden;
   border: none !important;
@@ -577,12 +577,10 @@ p { margin: 0 0 1em; color: var(--gray-light); }
 @media (max-width: 920px) {
   .about-hero-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
   }
   .about-photo-card {
-    max-width: 440px;
-    height: 480px;
-    min-height: 0;
+    max-width: 340px;
     margin: 0 auto;
   }
 }
