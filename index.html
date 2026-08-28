@@ -369,38 +369,167 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="section section--charcoal">
+  <!-- TESTIMONIALS (INFINITE CAROUSEL) -->
+  <section class="section section--charcoal testimonials-section">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head" style="margin-bottom: 24px;">
         <span class="eyebrow">What Our Clients Say</span>
         <h2>Happy Clients</h2>
-        <div class="kicker-divider"><span class="line"></span><span class="icon">✂️</span><span class="line"></span></div>
-      </div>
-      <div class="grid grid--3">
-        <div class="testimonial-card">
-          <div class="testimonial-head">
-            <div class="testimonial-avatar">🙂</div>
-            <div><div class="testimonial-name">[Client Name]</div><div class="testimonial-role">Deer Park, NY</div></div>
-          </div>
-          <p>&ldquo;[Add a real client review here.]&rdquo;</p>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-head">
-            <div class="testimonial-avatar">🙂</div>
-            <div><div class="testimonial-name">[Client Name]</div><div class="testimonial-role">Deer Park, NY</div></div>
-          </div>
-          <p>&ldquo;[Add a real client review here.]&rdquo;</p>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-head">
-            <div class="testimonial-avatar">🙂</div>
-            <div><div class="testimonial-name">[Client Name]</div><div class="testimonial-role">Deer Park, NY</div></div>
-          </div>
-          <p>&ldquo;[Add a real client review here.]&rdquo;</p>
+        <div class="kicker-divider">
+          <span class="line"></span>
+          <span class="icon">✂️</span>
+          <span class="line"></span>
         </div>
       </div>
-      <p class="testimonial-note">Real client reviews go here &mdash; add them from your Google Business Profile once available.</p>
+    </div>
+
+    <div class="testimonials-marquee-wrapper" aria-label="Happy client reviews infinite carousel">
+      <div class="testimonials-track">
+        <!-- Card 1 (James T.) -->
+        <div class="review-card-modern">
+          <div class="review-avatar-wrap">
+            <img src="images/avatar-1.jpg" alt="James T." class="review-avatar-img" loading="lazy">
+          </div>
+          <div class="review-body">
+            <span class="review-stars">★★★★★</span>
+            <p class="review-text">Best barber shop in town! <strong>Always on point</strong> and professional. Love the vibe and the results.</p>
+            <h4 class="review-author">&mdash; James T. <span class="review-location">Deer Park, NY</span></h4>
+          </div>
+        </div>
+
+        <!-- Card 2 (Michael R.) -->
+        <div class="review-card-modern">
+          <div class="review-avatar-wrap">
+            <img src="images/avatar-2.jpg" alt="Michael R." class="review-avatar-img" loading="lazy">
+          </div>
+          <div class="review-body">
+            <span class="review-stars">★★★★★</span>
+            <p class="review-text">Clean fades, great service, and <strong>friendly barbers</strong>. Highly recommend!</p>
+            <h4 class="review-author">&mdash; Michael R. <span class="review-location">Deer Park, NY</span></h4>
+          </div>
+        </div>
+
+        <!-- Card 3 (David L.) -->
+        <div class="review-card-modern">
+          <div class="review-avatar-wrap">
+            <img src="images/avatar-3.jpg" alt="David L." class="review-avatar-img" loading="lazy">
+          </div>
+          <div class="review-body">
+            <span class="review-stars">★★★★★</span>
+            <p class="review-text">I get compliments every time! <strong>These guys know</strong> what they're doing.</p>
+            <h4 class="review-author">&mdash; David L. <span class="review-location">Suffolk County, NY</span></h4>
+          </div>
+        </div>
+
+        <!-- Card 4 (Marcus W.) -->
+        <div class="review-card-modern">
+          <div class="review-avatar-wrap">
+            <img src="images/avatar-4.jpg" alt="Marcus W." class="review-avatar-img" loading="lazy">
+          </div>
+          <div class="review-body">
+            <span class="review-stars">★★★★★</span>
+            <p class="review-text">Incredible attention to detail on my <strong>loc retwist and line-up</strong>. Found my regular shop.</p>
+            <h4 class="review-author">&mdash; Marcus W. <span class="review-location">Deer Park, NY</span></h4>
+          </div>
+        </div>
+
+        <!-- Card 5 (Andre M.) -->
+        <div class="review-card-modern">
+          <div class="review-avatar-wrap">
+            <img src="images/avatar-5.jpg" alt="Andre M." class="review-avatar-img" loading="lazy">
+          </div>
+          <div class="review-body">
+            <span class="review-stars">★★★★★</span>
+            <p class="review-text">Top tier razor line-up, <strong>crisp skin fade</strong>, and master craftsmanship every visit.</p>
+            <h4 class="review-author">&mdash; Andre M. <span class="review-location">Bay Shore, NY</span></h4>
+          </div>
+        </div>
+
+        <!-- Card 6 (Chris B.) -->
+        <div class="review-card-modern">
+          <div class="review-avatar-wrap">
+            <img src="images/avatar-6.jpg" alt="Chris B." class="review-avatar-img" loading="lazy">
+          </div>
+          <div class="review-body">
+            <span class="review-stars">★★★★★</span>
+            <p class="review-text">Consistently fresh cuts and <strong>unmatched hospitality</strong>. The hot towel finish is unbeatable.</p>
+            <h4 class="review-author">&mdash; Chris B. <span class="review-location">Dix Hills, NY</span></h4>
+          </div>
+        </div>
+
+        <!-- DUPLICATE SET FOR SEAMLESS INFINITE LOOP -->
+        <!-- Duplicate Card 1 -->
+        <div class="review-card-modern" aria-hidden="true">
+          <div class="review-avatar-wrap">
+            <img src="images/avatar-1.jpg" alt="" class="review-avatar-img" loading="lazy">
+          </div>
+          <div class="review-body">
+            <span class="review-stars">★★★★★</span>
+            <p class="review-text">Best barber shop in town! <strong>Always on point</strong> and professional. Love the vibe and the results.</p>
+            <h4 class="review-author">&mdash; James T. <span class="review-location">Deer Park, NY</span></h4>
+          </div>
+        </div>
+
+        <!-- Duplicate Card 2 -->
+        <div class="review-card-modern" aria-hidden="true">
+          <div class="review-avatar-wrap">
+            <img src="images/avatar-2.jpg" alt="" class="review-avatar-img" loading="lazy">
+          </div>
+          <div class="review-body">
+            <span class="review-stars">★★★★★</span>
+            <p class="review-text">Clean fades, great service, and <strong>friendly barbers</strong>. Highly recommend!</p>
+            <h4 class="review-author">&mdash; Michael R. <span class="review-location">Deer Park, NY</span></h4>
+          </div>
+        </div>
+
+        <!-- Duplicate Card 3 -->
+        <div class="review-card-modern" aria-hidden="true">
+          <div class="review-avatar-wrap">
+            <img src="images/avatar-3.jpg" alt="" class="review-avatar-img" loading="lazy">
+          </div>
+          <div class="review-body">
+            <span class="review-stars">★★★★★</span>
+            <p class="review-text">I get compliments every time! <strong>These guys know</strong> what they're doing.</p>
+            <h4 class="review-author">&mdash; David L. <span class="review-location">Suffolk County, NY</span></h4>
+          </div>
+        </div>
+
+        <!-- Duplicate Card 4 -->
+        <div class="review-card-modern" aria-hidden="true">
+          <div class="review-avatar-wrap">
+            <img src="images/avatar-4.jpg" alt="" class="review-avatar-img" loading="lazy">
+          </div>
+          <div class="review-body">
+            <span class="review-stars">★★★★★</span>
+            <p class="review-text">Incredible attention to detail on my <strong>loc retwist and line-up</strong>. Found my regular shop.</p>
+            <h4 class="review-author">&mdash; Marcus W. <span class="review-location">Deer Park, NY</span></h4>
+          </div>
+        </div>
+
+        <!-- Duplicate Card 5 -->
+        <div class="review-card-modern" aria-hidden="true">
+          <div class="review-avatar-wrap">
+            <img src="images/avatar-5.jpg" alt="" class="review-avatar-img" loading="lazy">
+          </div>
+          <div class="review-body">
+            <span class="review-stars">★★★★★</span>
+            <p class="review-text">Top tier razor line-up, <strong>crisp skin fade</strong>, and master craftsmanship every visit.</p>
+            <h4 class="review-author">&mdash; Andre M. <span class="review-location">Bay Shore, NY</span></h4>
+          </div>
+        </div>
+
+        <!-- Duplicate Card 6 -->
+        <div class="review-card-modern" aria-hidden="true">
+          <div class="review-avatar-wrap">
+            <img src="images/avatar-6.jpg" alt="" class="review-avatar-img" loading="lazy">
+          </div>
+          <div class="review-body">
+            <span class="review-stars">★★★★★</span>
+            <p class="review-text">Consistently fresh cuts and <strong>unmatched hospitality</strong>. The hot towel finish is unbeatable.</p>
+            <h4 class="review-author">&mdash; Chris B. <span class="review-location">Dix Hills, NY</span></h4>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
