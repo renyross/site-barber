@@ -44,19 +44,7 @@ function initSite() {
     });
   }
 
-  document.addEventListener("click", function (e) {
-    var btn = e.target.closest(".mobile-dropdown-btn");
-    if (btn) {
-      e.preventDefault();
-      e.stopPropagation();
-      var parent = btn.closest(".has-mobile-dropdown");
-      if (parent) {
-        parent.classList.toggle("is-collapsed");
-        var isExpanded = !parent.classList.contains("is-collapsed");
-        btn.setAttribute("aria-expanded", isExpanded ? "true" : "false");
-      }
-    }
-  });
+
 
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && mobileDrawer && mobileDrawer.classList.contains("is-open")) {

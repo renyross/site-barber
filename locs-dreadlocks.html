@@ -7,7 +7,7 @@
 <meta name="description" content="Starter locs, retwist, loc maintenance, instant locs, loc repair, extensions, wicks and microlocs in Deer Park, Suffolk County, NY.">
 <link rel="canonical" href="https://www.YOURDOMAIN.com/locs-dreadlocks.html">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=9">
+<link rel="stylesheet" href="css/style.css?v=10">
 </head>
 <body>
 
@@ -83,20 +83,22 @@
     <!-- Scrollable Body -->
     <div class="mobile-nav-body">
       <ul class="mobile-nav-list">
-        <li class="mobile-nav-item has-mobile-dropdown">
-          <button type="button" class="mobile-dropdown-btn" aria-expanded="true" onclick="var p=this.closest('.has-mobile-dropdown');if(p){p.classList.toggle('is-collapsed');this.setAttribute('aria-expanded',!p.classList.contains('is-collapsed'));}">
-            <span>Services</span>
-            <svg class="mobile-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <ul class="mobile-subnav">
-            <li><a href="services.html">All Services</a></li>
-            <li><a href="haircuts-fades.html">Haircuts &amp; Fades</a></li>
-            <li><a href="beard-grooming.html">Beard Grooming</a></li>
-            <li><a href="locs-dreadlocks.html">Locs &amp; Dreadlocks</a></li>
-            <li><a href="braids.html">Braids</a></li>
-          </ul>
+        <li class="mobile-nav-item">
+          <details class="mobile-dropdown-details" open>
+            <summary class="mobile-dropdown-summary">
+              <span>Services</span>
+              <svg class="mobile-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <ul class="mobile-subnav">
+              <li><a href="services.html">All Services</a></li>
+              <li><a href="haircuts-fades.html">Haircuts &amp; Fades</a></li>
+              <li><a href="beard-grooming.html">Beard Grooming</a></li>
+              <li><a href="locs-dreadlocks.html">Locs &amp; Dreadlocks</a></li>
+              <li><a href="braids.html">Braids</a></li>
+            </ul>
+          </details>
         </li>
         <li class="mobile-nav-item">
           <a href="gallery.html" class="mobile-nav-link">Gallery</a>
@@ -247,6 +249,6 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=9"></script>
+<script src="js/main.js?v=10"></script>
 </body>
 </html>

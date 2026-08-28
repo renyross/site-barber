@@ -523,7 +523,41 @@ p { margin: 0 0 1em; color: var(--gray-light); }
   width: 100%;
 }
 
-.mobile-dropdown-btn,
+.mobile-dropdown-details {
+  width: 100%;
+}
+
+.mobile-dropdown-summary {
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  padding: 16px 4px !important;
+  font-family: var(--font-display) !important;
+  font-size: 1.35rem !important;
+  letter-spacing: 0.06em !important;
+  color: var(--off-white) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+  cursor: pointer !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.mobile-dropdown-summary::-webkit-details-marker,
+.mobile-dropdown-summary::marker {
+  display: none !important;
+}
+
+.mobile-dropdown-summary:hover,
+.mobile-dropdown-summary:active,
+.mobile-nav-link:hover,
+.mobile-nav-link:active {
+  color: var(--gold) !important;
+}
+
 .mobile-nav-link {
   width: 100%;
   display: flex;
@@ -535,20 +569,8 @@ p { margin: 0 0 1em; color: var(--gray-light); }
   letter-spacing: 0.06em;
   color: var(--off-white);
   text-decoration: none;
-  background: none;
-  border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-  cursor: pointer;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
   transition: color 0.2s ease;
-}
-
-.mobile-dropdown-btn:hover,
-.mobile-nav-link:hover,
-.mobile-dropdown-btn:active,
-.mobile-nav-link:active {
-  color: var(--gold);
 }
 
 .mobile-chevron {
@@ -556,18 +578,15 @@ p { margin: 0 0 1em; color: var(--gray-light); }
   height: 20px;
   transition: transform 0.25s ease;
   color: var(--gold);
-  transform: rotate(0deg);
+  pointer-events: none;
 }
 
-.has-mobile-dropdown.is-collapsed .mobile-chevron {
+details[open] > .mobile-dropdown-summary .mobile-chevron {
+  transform: rotate(0deg) !important;
+}
+
+details:not([open]) > .mobile-dropdown-summary .mobile-chevron {
   transform: rotate(-90deg) !important;
-}
-
-.has-mobile-dropdown.is-collapsed .mobile-subnav {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
 }
 
 .mobile-subnav {
