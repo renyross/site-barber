@@ -1,37 +1,66 @@
 // Bab Nazareth Barbershop — site interactions
 function initSite() {
-  // Mobile nav toggle
-  var toggle = document.querySelector(".nav-toggle");
-  var links = document.querySelector(".nav-links");
+  // Mobile Nav Drawer Controller
+  var navToggle = document.querySelector(".nav-toggle");
+  var mobileDrawer = document.getElementById("mobileNavDrawer");
+  var mobileClose = document.getElementById("mobileNavClose");
+  var mobileDropdownBtn = document.querySelector(".mobile-dropdown-btn");
 
-  if (toggle && links) {
-    toggle.addEventListener("click", function (e) {
+  function openMobileNav() {
+    if (mobileDrawer) {
+      mobileDrawer.classList.add("is-open");
+      mobileDrawer.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function closeMobileNav() {
+    if (mobileDrawer) {
+      mobileDrawer.classList.remove("is-open");
+      mobileDrawer.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+  }
+
+  if (navToggle) {
+    navToggle.addEventListener("click", function (e) {
       e.stopPropagation();
-      links.classList.toggle("is-open");
-      toggle.classList.toggle("is-active");
-      var expanded = links.classList.contains("is-open");
-      toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
-      document.body.style.overflow = expanded ? "hidden" : "";
+      openMobileNav();
     });
+  }
 
-    links.querySelectorAll("a").forEach(function (link) {
+  if (mobileClose) {
+    mobileClose.addEventListener("click", function (e) {
+      e.stopPropagation();
+      closeMobileNav();
+    });
+  }
+
+  if (mobileDrawer) {
+    mobileDrawer.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        links.classList.remove("is-open");
-        toggle.classList.remove("is-active");
-        toggle.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
+        closeMobileNav();
       });
     });
+  }
 
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && links.classList.contains("is-open")) {
-        links.classList.remove("is-open");
-        toggle.classList.remove("is-active");
-        toggle.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
+  if (mobileDropdownBtn) {
+    mobileDropdownBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var parent = this.closest(".has-mobile-dropdown");
+      if (parent) {
+        parent.classList.toggle("is-collapsed");
+        var isExpanded = !parent.classList.contains("is-collapsed");
+        this.setAttribute("aria-expanded", isExpanded ? "true" : "false");
       }
     });
   }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && mobileDrawer && mobileDrawer.classList.contains("is-open")) {
+      closeMobileNav();
+    }
+  });
 
   // Close only one FAQ item open at a time (accordion behavior)
   var faqItems = document.querySelectorAll(".faq-item");

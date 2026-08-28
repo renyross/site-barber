@@ -7,7 +7,7 @@
 <meta name="description" content="Beard shape ups, hot towel shaves and eyebrow grooming at Bab Nazareth Barbershop in Deer Park, NY.">
 <link rel="canonical" href="https://www.YOURDOMAIN.com/beard-grooming.html">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=7">
+<link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body>
 
@@ -34,12 +34,12 @@
       <span class="brand-mark">💈</span>
       <span class="brand-text">BAB NAZARETH<span class="brand-sub">Barbershop</span></span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
       <li class="has-dropdown">
-        <a href="services.html" class="dropdown-trigger is-active">
+        <a href="services.html" class="dropdown-trigger">
           <span>Services</span>
           <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polyline points="6 9 12 15 18 9"></polyline>
@@ -56,17 +56,76 @@
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li class="nav-mobile-footer">
-        <a href="book-appointment.html" class="btn btn--gold btn--full">Book Appointment</a>
-        <a href="tel:6314888222" class="mobile-nav-call">📞 Call (631) 488-8222</a>
-        <p class="mobile-nav-addr">📍 2118 Deer Park Ave, Deer Park, NY</p>
-      </li>
     </ul>
     <div class="nav-cta desktop-only">
       <a href="book-appointment.html" class="btn btn--gold btn--sm">Book Appointment</a>
     </div>
   </nav>
 </header>
+
+<!-- MOBILE NAVIGATION DRAWER (USER-REQUESTED FORMAT) -->
+<div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <!-- Top Bar: Logo left, Close button right -->
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">💈</span>
+        <span class="brand-text">BAB NAZARETH<span class="brand-sub">Barbershop</span></span>
+      </a>
+      <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Scrollable Body -->
+    <div class="mobile-nav-body">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item has-mobile-dropdown">
+          <button type="button" class="mobile-dropdown-btn" aria-expanded="true">
+            <span>Services</span>
+            <svg class="mobile-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <ul class="mobile-subnav">
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="haircuts-fades.html">Haircuts &amp; Fades</a></li>
+            <li><a href="beard-grooming.html">Beard Grooming</a></li>
+            <li><a href="locs-dreadlocks.html">Locs &amp; Dreadlocks</a></li>
+            <li><a href="braids.html">Braids</a></li>
+          </ul>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="about.html" class="mobile-nav-link">About Us</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Bottom Actions -->
+      <div class="mobile-nav-bottom">
+        <a href="book-appointment.html" class="btn btn--gold btn--full mobile-primary-cta">
+          BOOK APPOINTMENT ✂️
+        </a>
+        <div class="mobile-bottom-row">
+          <a href="tel:6314888222" class="mobile-pill-btn">
+            <span>📞</span> (631) 488-8222
+          </a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=2118+Deer+Park+Avenue,+Deer+Park,+NY+11729" target="_blank" rel="noopener" class="mobile-pill-btn">
+            <span>📍</span> Deer Park, NY
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <main>
   <section class="page-hero">
@@ -174,6 +233,6 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=7"></script>
+<script src="js/main.js?v=8"></script>
 </body>
 </html>
