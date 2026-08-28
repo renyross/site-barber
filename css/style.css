@@ -556,14 +556,18 @@ p { margin: 0 0 1em; color: var(--gray-light); }
   height: 20px;
   transition: transform 0.25s ease;
   color: var(--gold);
+  transform: rotate(0deg);
 }
 
 .has-mobile-dropdown.is-collapsed .mobile-chevron {
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) !important;
 }
 
 .has-mobile-dropdown.is-collapsed .mobile-subnav {
-  display: none;
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .mobile-subnav {

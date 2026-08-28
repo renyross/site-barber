@@ -7,7 +7,7 @@
 <meta name="description" content="Professional braiding, long hair care and women's haircuts at Bab Nazareth Barbershop in Deer Park, NY.">
 <link rel="canonical" href="https://www.YOURDOMAIN.com/braids.html">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=8">
+<link rel="stylesheet" href="css/style.css?v=9">
 </head>
 <body>
 
@@ -84,7 +84,7 @@
     <div class="mobile-nav-body">
       <ul class="mobile-nav-list">
         <li class="mobile-nav-item has-mobile-dropdown">
-          <button type="button" class="mobile-dropdown-btn" aria-expanded="true">
+          <button type="button" class="mobile-dropdown-btn" aria-expanded="true" onclick="var p=this.closest('.has-mobile-dropdown');if(p){p.classList.toggle('is-collapsed');this.setAttribute('aria-expanded',!p.classList.contains('is-collapsed'));}">
             <span>Services</span>
             <svg class="mobile-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <polyline points="6 9 12 15 18 9"></polyline>
@@ -234,6 +234,6 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=8"></script>
+<script src="js/main.js?v=9"></script>
 </body>
 </html>
