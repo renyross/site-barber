@@ -167,10 +167,84 @@
         <h2>Fade Styles We Cut</h2>
         <p>Every fade is blended to your preferred length and style.</p>
       </div>
-      <div class="grid grid--3">
-        <div class="card"><h3>Low Fade</h3><p>A subtle fade that keeps more length up top.</p></div>
-        <div class="card"><h3>Mid Fade</h3><p>A balanced blend starting midway up the sides.</p></div>
-        <div class="card"><h3>Skin Fade</h3><p>A sharp fade down to the skin for maximum contrast.</p></div>
+
+      <div class="services-carousel-wrapper">
+        <div class="carousel-nav-header">
+          <span class="carousel-hint">Explore our different fade options</span>
+          <div class="carousel-controls">
+            <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Previous style" onclick="var c=this.closest('.services-carousel-wrapper').querySelector('.services-carousel'); if(c) c.scrollBy({left: -330, behavior: 'smooth'});">&#8249;</button>
+            <button type="button" class="carousel-btn carousel-btn--next" aria-label="Next style" onclick="var c=this.closest('.services-carousel-wrapper').querySelector('.services-carousel'); if(c) c.scrollBy({left: 330, behavior: 'smooth'});">&#8250;</button>
+          </div>
+        </div>
+
+        <div class="services-carousel">
+          <div class="card service-card">
+            <div class="service-card-media">
+              <img src="images/service-low-fade.jpg" alt="Low Fade Haircut" class="service-card-img" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <div class="service-card-top">
+                <h3>Low Fade</h3>
+              </div>
+              <p class="service-desc">A subtle fade that keeps more length up top.</p>
+              <a href="book-appointment.html" class="btn btn--outline btn--sm">Book Now</a>
+            </div>
+          </div>
+
+          <div class="card service-card">
+            <div class="service-card-media">
+              <img src="images/service-fade-clipper.jpg" alt="Mid Fade Haircut" class="service-card-img" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <div class="service-card-top">
+                <h3>Mid Fade</h3>
+              </div>
+              <p class="service-desc">A balanced blend starting midway up the sides.</p>
+              <a href="book-appointment.html" class="btn btn--outline btn--sm">Book Now</a>
+            </div>
+          </div>
+
+          <div class="card service-card">
+            <div class="service-card-media">
+              <img src="images/service-low-fade.jpg" alt="Skin Fade Haircut" class="service-card-img" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <div class="service-card-top">
+                <h3>Skin Fade</h3>
+              </div>
+              <p class="service-desc">A sharp fade down to the skin for maximum contrast.</p>
+              <a href="book-appointment.html" class="btn btn--outline btn--sm">Book Now</a>
+            </div>
+          </div>
+
+          <div class="card service-card">
+            <div class="service-card-media">
+              <img src="images/service-neck-taper.jpg" alt="Neck Taper Fade" class="service-card-img" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <div class="service-card-top">
+                <h3>Neck Taper</h3>
+              </div>
+              <p class="service-desc">A clean, sharp blowout taper fade at the neck.</p>
+              <a href="book-appointment.html" class="btn btn--outline btn--sm">Book Now</a>
+            </div>
+          </div>
+
+          <div class="card service-card">
+            <div class="service-card-media">
+              <img src="images/service-design-cross.jpg" alt="Custom Hair Design Cross" class="service-card-img" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <div class="service-card-top">
+                <h3>Hair Design</h3>
+              </div>
+              <p class="service-desc">Unique custom geometric or artistic hair designs shaved into the fade.</p>
+              <a href="book-appointment.html" class="btn btn--outline btn--sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-dots" aria-hidden="true"></div>
       </div>
     </div>
   </section>
